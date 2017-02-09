@@ -17,7 +17,7 @@ public class StopWatch implements Runnable {
     public void run() {
         int countUp = 0;
         try {
-            while(stopTimerAfter >= countUp) {
+            while(stopTimerAfter > countUp) {
                 Thread.sleep(1000);
                 synchronized (times) {
                     countUp = (int)((System.currentTimeMillis() - start)/1000);
